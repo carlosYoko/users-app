@@ -1,1 +1,19 @@
-<p>user works!</p>
+<div class="row d-flex justify-content-center" *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+<div class="row" *ngIf="!loading">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card" style="width: 25rem; margin: 0 auto;">
+            <img [src]="urlImg" alt="" class="card-img-top img-thumbnail">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{name}}</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{email}}</li>
+                    <li class="list-group-item">{{gender.charAt(0).toUpperCase()}}{{gender.slice(1)}}</li>
+                    <li class="list-group-item">{{status ? 'Active' : 'Unactive'}}</li>
+                </ul>
+            </div>
+            <button class="btn btnprimary btn-block btn-xl" routerLink="/dashboard">VOLVER</button>
+        </div>
+    </div>
+</div>

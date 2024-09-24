@@ -11,6 +11,7 @@ import { UsersListComponent } from './dashboard/users-list/users-list.component'
 import { LayoutComponent } from './layout/layout.component';
 import { UserCardComponent } from './dashboard/users-list/user-card/user-card.component';
 import { UserComponent } from './dashboard/user/user.component';
+import { SpinnerComponent } from './dashboard/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserComponent } from './dashboard/user/user.component';
     UsersListComponent,
     LayoutComponent,
     UserCardComponent,
-    UserComponent
+    UserComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
