@@ -1,7 +1,7 @@
 <div class="card" style="width: 18rem;">
-    <img [src]="user?.picture?.large" alt="" class="card-img-top">
+    <img [src]="urlImg" alt="" class="card-img-top">
     <div class="card-body">
-        <h5 class="card-title text-center">{{user?.name?.first}}</h5>
+        <h5 class="card-title text-center">{{user?.name}}</h5>
         <p class="card-text text-center">{{user?.email}}</p>
         <button class="btn btn-primary btn-block btn-xl" routerLink="user/{{id}}">VER</button>
     </div>

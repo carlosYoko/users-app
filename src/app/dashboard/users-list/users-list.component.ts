@@ -8,8 +8,6 @@ import { TUser } from './utilities/custom-types';
   styleUrls: ['./users-list.component.css']
 })
 
-
-
 export class UsersListComponent {
   loading = true
   Users: TUser[] = [];
@@ -22,7 +20,7 @@ export class UsersListComponent {
 
   getUsers(): void {
     this.userService.getUsers().subscribe(data => {
-      this.Users = data.results
+      this.Users = data
       this.loading = false
     })
   }

@@ -8,9 +8,10 @@ import { TUser } from '../utilities/custom-types';
 })
 export class UserCardComponent implements OnInit {
   @Input() user?: TUser;
-  id!: string;
+  id!: number;
+  urlImg = 'https://cdn.pixabay.com/photo/2023/10/24/05/08/dog-8337394_1280.jpg'
 
   ngOnInit(): void {
-    this.id = this.user!.id.value;
+    this.id = this.user!.id
   }
 }

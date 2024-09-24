@@ -8,13 +8,17 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
 
-  url = 'https://randomuser.me/api/?results=10';
+  url = 'https://gorest.co.in/public/v2/users';
   token = environment.TOKEN;
 
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.http.get<any>(`${this.url}`)
+    return this.http.get<any>(`${this.url}?access-token=${this.token}`)
+  }
+
+  getUserById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.url}/${id}?access-token=${this.token}`)
   }
 
 }
