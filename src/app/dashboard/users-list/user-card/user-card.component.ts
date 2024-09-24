@@ -8,10 +8,9 @@ import { TUser } from '../utilities/custom-types';
 })
 export class UserCardComponent implements OnInit {
   @Input() user?: TUser;
-
-
-  constructor() { }
+  id!: string;
 
   ngOnInit(): void {
+    this.id = this.user!.id.value;
   }
 }

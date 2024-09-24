@@ -1,6 +1,8 @@
 .footer {
+    background-color: whitesmoke;
     position: fixed;
     bottom: 0;
+    padding: 16px 0px 0px 0px;
     width: 100%;
     text-align: center;
 }
