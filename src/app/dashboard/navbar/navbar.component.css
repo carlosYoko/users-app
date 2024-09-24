@@ -1,4 +1,7 @@
 .navbar {
+    background: linear-gradient(rgba(255, 255, 255, 0.16), rgba(0, 0, 0, 0.171)),
+        url(../../../assets/images/background.jpg)no-repeat center center fixed;
+    background-size: cover;
     background-color: #225285;
     height: 70px;
     font-family: "Montserrat", sans-serif;
