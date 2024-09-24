@@ -11,7 +11,7 @@ import { TUser } from './utilities/custom-types';
 
 
 export class UsersListComponent {
-
+  loading = true
   Users: TUser[] = [];
 
   constructor(private userService: UserService) { }
@@ -23,7 +23,7 @@ export class UsersListComponent {
   getUsers(): void {
     this.userService.getUsers().subscribe(data => {
       this.Users = data.results
-      console.log(this.Users)
+      this.loading = false
     })
   }
 }
